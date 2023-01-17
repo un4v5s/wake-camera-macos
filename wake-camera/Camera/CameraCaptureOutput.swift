@@ -40,6 +40,7 @@ class CameraCaptureOutput: NSObject, AVCapturePhotoCaptureDelegate {
 //        fatalError("Failed to create directory: \(error.localizedDescription)")
 //      }
 //    }
+    
     let folderPath = URL(string: "file://\(self.saveFolderPath)")
 //    let newImagePathPNG = URL(fileURLWithPath: String(NSDate().timeIntervalSince1970 * 1000) + ".png"  , isDirectory: false, relativeTo: folderPath)
 //    let result = self.savePNG(image: image!, path: newImagePathPNG)

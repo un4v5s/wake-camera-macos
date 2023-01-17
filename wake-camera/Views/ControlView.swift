@@ -69,6 +69,7 @@ struct ControlView: View {
 //            self.saveFolderPath = panel.url?.path() ?? NSHomeDirectory()
 //          }
 //        }
+        //a
           Button("wake", action: {
             self.cameraManager.start()
             self.model.resetTakePhotoFlag()
