@@ -39,28 +39,45 @@ struct ControlView: View {
   @Binding var sessionStarted: Bool
   private let cameraManager = CameraManager.shared
 
+  @State var showFileChooser = false
+  @State var folderPath = "Filename"
+  @AppStorage("SaveFolderPath") private var saveFolderPath = NSHomeDirectory()
+
   var body: some View {
     VStack {
       Spacer()
+      Text("SaveFolderPath: " + self.saveFolderPath)
 
       HStack(spacing: 12) {
         Text("Avg.: " + self.averageRed.description)
         Text("Session Started: " + self.sessionStarted.description)
+//        Button("Open Save Folder"){
+//          NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: self.saveFolderPath)
+//        }
+//        Button("Reset Folder"){
+//          self.saveFolderPath = NSHomeDirectory()
+//        }
+//        Button("Choose Folder to Save")
+//        {
+//          let panel = NSOpenPanel()
+//          panel.canChooseFiles = false
+//          panel.canChooseDirectories = true
+//          panel.allowsMultipleSelection = false
+//          panel.canCreateDirectories = true
+//          panel.directoryURL = URL(string: self.saveFolderPath)
+//          if panel.runModal() == .OK {
+//            self.saveFolderPath = panel.url?.path() ?? NSHomeDirectory()
+//          }
+//        }
           Button("wake", action: {
             self.cameraManager.start()
             self.model.resetTakePhotoFlag()
           })
-
-//        if self.sessionStarted {
-          Button("start", action: {
-            self.cameraManager.start()
-            self.model.resetTakePhotoFlag()
-          })
-//        }else{
-          Button("stop", action: {self.cameraManager.stop()})
-//        }
+//          Button("stop", action: {self.cameraManager.stop()})
       }
     }
+
+
   }
 }
 

@@ -23,6 +23,7 @@
 		3E530CE02972B1AC00A632FC /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CDF2972B1AC00A632FC /* FrameManager.swift */; };
 		3E530CE22972B32700A632FC /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CE12972B32700A632FC /* ContentViewModel.swift */; };
 		3E530CE42972BF1600A632FC /* NSImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CE32972BF1600A632FC /* NSImageExtension.swift */; };
+		3ED643A729770E9500F4496E /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED643A629770E9500F4496E /* MenuBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		3E530CDF2972B1AC00A632FC /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
 		3E530CE12972B32700A632FC /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		3E530CE32972BF1600A632FC /* NSImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtension.swift; sourceTree = "<group>"; };
+		3ED643A629770E9500F4496E /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				3E530CCA2972AA0E00A632FC /* ContentView.swift */,
 				3E530CC92972AA0E00A632FC /* ToggleButton.swift */,
 				3E530CCB2972AA0E00A632FC /* ControlView.swift */,
+				3ED643A629770E9500F4496E /* MenuBarView.swift */,
 				3E530CCC2972AA0E00A632FC /* ErrorView.swift */,
 				3E530CD52972AB9F00A632FC /* FrameView.swift */,
 			);
@@ -262,6 +265,7 @@
 				3E530CDE2972B0DD00A632FC /* CGImageExtension.swift in Sources */,
 				3E530CE02972B1AC00A632FC /* FrameManager.swift in Sources */,
 				3E530CDA2972B0BA00A632FC /* CameraError.swift in Sources */,
+				3ED643A729770E9500F4496E /* MenuBarView.swift in Sources */,
 				3E530CE22972B32700A632FC /* ContentViewModel.swift in Sources */,
 				3E3B4D4C29746418000C48B3 /* ViewExtension.swift in Sources */,
 				3E530CB02972A9EA00A632FC /* wake_cameraApp.swift in Sources */,

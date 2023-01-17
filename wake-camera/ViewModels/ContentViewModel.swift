@@ -61,11 +61,13 @@ class ContentViewModel: ObservableObject {
         let differenceInSeconds = Int(Date().timeIntervalSince(self.cameraManager.sessionStartDate ?? Date()))
         print(differenceInSeconds)
         
+        // at least wait for 2 seconds
         if red > 0.4 && differenceInSeconds > 2 {
           print("2 second has passed.")
           self.takePhotoFlag = true
           self.cameraManager.makePhotoAndStopCamera()
           
+        // maximum wait for 5 sec
         }else if differenceInSeconds > 5{
           self.takePhotoFlag = true
           print("5 second has passed.")

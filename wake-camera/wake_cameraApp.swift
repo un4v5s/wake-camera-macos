@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct wake_cameraApp: App {
+  @AppStorage("showMenuBarExtra") private var showMenuBarExtra = true
+
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+      MenuBarExtra(
+          "App Menu Bar Extra", systemImage: "star",
+          isInserted: $showMenuBarExtra)
+      {
+          MenuBarView()
+      }
+
     }
 }

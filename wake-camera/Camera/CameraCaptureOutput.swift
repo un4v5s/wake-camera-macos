@@ -7,9 +7,11 @@
 
 import AVFoundation
 import AppKit
+import SwiftUI
 
 class CameraCaptureOutput: NSObject, AVCapturePhotoCaptureDelegate {
   private let cameraManager = CameraManager.shared
+  @AppStorage("SaveFolderPath") private var saveFolderPath = NSHomeDirectory()
 
   func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) -> Void {
     print("didFinishProcessingPhoto - \(photo)")
@@ -19,29 +21,29 @@ class CameraCaptureOutput: NSObject, AVCapturePhotoCaptureDelegate {
       cameraManager.stop()
     }
 
-    guard let imageData = photo.fileDataRepresentation()
-    else { return }
+    guard let imageData = photo.fileDataRepresentation() else { return }
 
     let image = NSImage(data: imageData)
 
-    let paths = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask)
-
-    let folderPath = URL(fileURLWithPath: "wake-images/", isDirectory: true, relativeTo: paths[0])
-    let exists = directoryExistsAtPath(folderPath.path)
-    if exists {
-      print("yes")
-    }else{
-      print("no")
-      do {
-        try FileManager.default.createDirectory(atPath: folderPath.path, withIntermediateDirectories: true)
-      } catch{
-        fatalError("Failed to create directory: \(error.localizedDescription)")
-      }
-    }
+//    check permission is no longer required
+//    let paths = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask)
+//    let folderPath = URL(fileURLWithPath: "wake-images/", isDirectory: true, relativeTo: paths[0])
     
-    let newImagePathPNG = URL(fileURLWithPath: String(NSDate().timeIntervalSince1970 * 1000) + ".png"  , isDirectory: false, relativeTo: folderPath)
-    let result = self.savePNG(image: image!, path: newImagePathPNG)
-    print("capture photo, result=\(result)")
+//    let exists = directoryExistsAtPath(folderPath.path)
+//    if exists {
+//      print("yes")
+//    }else{
+//      print("no")
+//      do {
+//        try FileManager.default.createDirectory(atPath: folderPath.path, withIntermediateDirectories: true)
+//      } catch{
+//        fatalError("Failed to create directory: \(error.localizedDescription)")
+//      }
+//    }
+    let folderPath = URL(string: "file://\(self.saveFolderPath)")
+//    let newImagePathPNG = URL(fileURLWithPath: String(NSDate().timeIntervalSince1970 * 1000) + ".png"  , isDirectory: false, relativeTo: folderPath)
+//    let result = self.savePNG(image: image!, path: newImagePathPNG)
+//    print("capture photo, result=\(result)")
     
     let newImagePathJPEG = URL(fileURLWithPath: String(NSDate().timeIntervalSince1970 * 1000) + ".jpeg"  , isDirectory: false, relativeTo: folderPath)
     let result2 = self.saveJPEG(image: image!, path: newImagePathJPEG)
