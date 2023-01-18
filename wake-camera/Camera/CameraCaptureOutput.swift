@@ -12,7 +12,7 @@ import SwiftUI
 class CameraCaptureOutput: NSObject, AVCapturePhotoCaptureDelegate {
   private let cameraManager = CameraManager.shared
   @AppStorage("SaveFolderPath") private var saveFolderPath = NSHomeDirectory()
-
+  
   func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) -> Void {
     print("didFinishProcessingPhoto - \(photo)")
     
@@ -20,31 +20,31 @@ class CameraCaptureOutput: NSObject, AVCapturePhotoCaptureDelegate {
       // stop camera after save
       cameraManager.stop()
     }
-
-    guard let imageData = photo.fileDataRepresentation() else { return }
-
-    let image = NSImage(data: imageData)
-
-//    check permission is no longer required
-//    let paths = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask)
-//    let folderPath = URL(fileURLWithPath: "wake-images/", isDirectory: true, relativeTo: paths[0])
     
-//    let exists = directoryExistsAtPath(folderPath.path)
-//    if exists {
-//      print("yes")
-//    }else{
-//      print("no")
-//      do {
-//        try FileManager.default.createDirectory(atPath: folderPath.path, withIntermediateDirectories: true)
-//      } catch{
-//        fatalError("Failed to create directory: \(error.localizedDescription)")
-//      }
-//    }
+    guard let imageData = photo.fileDataRepresentation() else { return }
+    
+    let image = NSImage(data: imageData)
+    
+    //    check permission is no longer required
+    //    let paths = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask)
+    //    let folderPath = URL(fileURLWithPath: "wake-images/", isDirectory: true, relativeTo: paths[0])
+    
+    //    let exists = directoryExistsAtPath(folderPath.path)
+    //    if exists {
+    //      print("yes")
+    //    }else{
+    //      print("no")
+    //      do {
+    //        try FileManager.default.createDirectory(atPath: folderPath.path, withIntermediateDirectories: true)
+    //      } catch{
+    //        fatalError("Failed to create directory: \(error.localizedDescription)")
+    //      }
+    //    }
     
     let folderPath = URL(string: "file://\(self.saveFolderPath)")
-//    let newImagePathPNG = URL(fileURLWithPath: String(NSDate().timeIntervalSince1970 * 1000) + ".png"  , isDirectory: false, relativeTo: folderPath)
-//    let result = self.savePNG(image: image!, path: newImagePathPNG)
-//    print("capture photo, result=\(result)")
+    //    let newImagePathPNG = URL(fileURLWithPath: String(NSDate().timeIntervalSince1970 * 1000) + ".png"  , isDirectory: false, relativeTo: folderPath)
+    //    let result = self.savePNG(image: image!, path: newImagePathPNG)
+    //    print("capture photo, result=\(result)")
     
     let newImagePathJPEG = URL(fileURLWithPath: String(NSDate().timeIntervalSince1970 * 1000) + ".jpeg"  , isDirectory: false, relativeTo: folderPath)
     let result2 = self.saveJPEG(image: image!, path: newImagePathJPEG)
@@ -54,11 +54,11 @@ class CameraCaptureOutput: NSObject, AVCapturePhotoCaptureDelegate {
     return
   }
   
-//  func photoOutput(_ output: AVCapturePhotoOutput, didCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
-//    print("didCapturePhotoFor - \(resolvedSettings)")
-////    cameraManager.stop()
-//  }
-
+  //  func photoOutput(_ output: AVCapturePhotoOutput, didCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
+  //    print("didCapturePhotoFor - \(resolvedSettings)")
+  ////    cameraManager.stop()
+  //  }
+  
   func savePNG(image: NSImage, path: URL) -> Bool {
     let imageRep = NSBitmapImageRep(data: image.tiffRepresentation!)
     let pngData = imageRep?.representation(using: NSBitmapImageRep.FileType.png, properties: [:])
@@ -75,20 +75,20 @@ class CameraCaptureOutput: NSObject, AVCapturePhotoCaptureDelegate {
   func saveJPEG(image: NSImage, path: URL) -> Bool {
     let imageRep = NSBitmapImageRep(data: image.tiffRepresentation!)
     let jpegData = imageRep?.representation(using: NSBitmapImageRep.FileType.jpeg, properties: [.compressionFactor:0.8])
-
+    
     do {
       try jpegData?.write(to: path, options: [.atomic])
     } catch {
       fatalError("Failed to write: \(error.localizedDescription)")
     }
-
+    
     return true
   }
   
   fileprivate func directoryExistsAtPath(_ path: String) -> Bool {
-      var isDirectory = ObjCBool(true)
-      let exists = FileManager.default.fileExists(atPath: path, isDirectory: &isDirectory)
-      return exists && isDirectory.boolValue
+    var isDirectory = ObjCBool(true)
+    let exists = FileManager.default.fileExists(atPath: path, isDirectory: &isDirectory)
+    return exists && isDirectory.boolValue
   }
 }
 

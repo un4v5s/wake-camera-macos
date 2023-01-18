@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3E3B4D4A29745B68000C48B3 /* CameraCaptureOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3B4D4929745B68000C48B3 /* CameraCaptureOutput.swift */; };
-		3E3B4D4C29746418000C48B3 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3B4D4B29746418000C48B3 /* ViewExtension.swift */; };
 		3E530CB02972A9EA00A632FC /* wake_cameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CAF2972A9EA00A632FC /* wake_cameraApp.swift */; };
 		3E530CB42972A9EC00A632FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E530CB32972A9EC00A632FC /* Assets.xcassets */; };
 		3E530CB72972A9EC00A632FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E530CB62972A9EC00A632FC /* Preview Assets.xcassets */; };
@@ -24,11 +23,13 @@
 		3E530CE22972B32700A632FC /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CE12972B32700A632FC /* ContentViewModel.swift */; };
 		3E530CE42972BF1600A632FC /* NSImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CE32972BF1600A632FC /* NSImageExtension.swift */; };
 		3ED643A729770E9500F4496E /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED643A629770E9500F4496E /* MenuBarView.swift */; };
+		3ED643AB297832C400F4496E /* AppHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED643AA297832C400F4496E /* AppHandlers.swift */; };
+		3ED643AD2978330A00F4496E /* NSWorkspaceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED643AC2978330A00F4496E /* NSWorkspaceExtension.swift */; };
+		3ED643AF297866B300F4496E /* MenuBarErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED643AE297866B300F4496E /* MenuBarErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3E3B4D4929745B68000C48B3 /* CameraCaptureOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCaptureOutput.swift; sourceTree = "<group>"; };
-		3E3B4D4B29746418000C48B3 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		3E530CAC2972A9EA00A632FC /* wake-camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wake-camera.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E530CAF2972A9EA00A632FC /* wake_cameraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wake_cameraApp.swift; sourceTree = "<group>"; };
 		3E530CB32972A9EC00A632FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +54,9 @@
 		3E530CE12972B32700A632FC /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		3E530CE32972BF1600A632FC /* NSImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtension.swift; sourceTree = "<group>"; };
 		3ED643A629770E9500F4496E /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		3ED643AA297832C400F4496E /* AppHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHandlers.swift; sourceTree = "<group>"; };
+		3ED643AC2978330A00F4496E /* NSWorkspaceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWorkspaceExtension.swift; sourceTree = "<group>"; };
+		3ED643AE297866B300F4496E /* MenuBarErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				3E530CAF2972A9EA00A632FC /* wake_cameraApp.swift */,
+				3ED643AA297832C400F4496E /* AppHandlers.swift */,
 				3E530CB32972A9EC00A632FC /* Assets.xcassets */,
 				3E530CCD2972AA0E00A632FC /* Camera */,
 				3E530CD02972AA0E00A632FC /* Extensions */,
@@ -150,9 +155,10 @@
 				3E530CCA2972AA0E00A632FC /* ContentView.swift */,
 				3E530CC92972AA0E00A632FC /* ToggleButton.swift */,
 				3E530CCB2972AA0E00A632FC /* ControlView.swift */,
-				3ED643A629770E9500F4496E /* MenuBarView.swift */,
-				3E530CCC2972AA0E00A632FC /* ErrorView.swift */,
 				3E530CD52972AB9F00A632FC /* FrameView.swift */,
+				3E530CCC2972AA0E00A632FC /* ErrorView.swift */,
+				3ED643A629770E9500F4496E /* MenuBarView.swift */,
+				3ED643AE297866B300F4496E /* MenuBarErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,7 +187,7 @@
 			children = (
 				3E530CD12972AA0E00A632FC /* CGImageExtension.swift */,
 				3E530CE32972BF1600A632FC /* NSImageExtension.swift */,
-				3E3B4D4B29746418000C48B3 /* ViewExtension.swift */,
+				3ED643AC2978330A00F4496E /* NSWorkspaceExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED643AF297866B300F4496E /* MenuBarErrorView.swift in Sources */,
 				3E3B4D4A29745B68000C48B3 /* CameraCaptureOutput.swift in Sources */,
 				3E530CDD2972B0D000A632FC /* ControlView.swift in Sources */,
 				3E530CDC2972B0D000A632FC /* ToggleButton.swift in Sources */,
@@ -263,11 +270,12 @@
 				3E530CD62972AB9F00A632FC /* FrameView.swift in Sources */,
 				3E530CDB2972B0D000A632FC /* ErrorView.swift in Sources */,
 				3E530CDE2972B0DD00A632FC /* CGImageExtension.swift in Sources */,
+				3ED643AB297832C400F4496E /* AppHandlers.swift in Sources */,
 				3E530CE02972B1AC00A632FC /* FrameManager.swift in Sources */,
 				3E530CDA2972B0BA00A632FC /* CameraError.swift in Sources */,
 				3ED643A729770E9500F4496E /* MenuBarView.swift in Sources */,
 				3E530CE22972B32700A632FC /* ContentViewModel.swift in Sources */,
-				3E3B4D4C29746418000C48B3 /* ViewExtension.swift in Sources */,
+				3ED643AD2978330A00F4496E /* NSWorkspaceExtension.swift in Sources */,
 				3E530CB02972A9EA00A632FC /* wake_cameraApp.swift in Sources */,
 				3E530CD92972AE3700A632FC /* CameraManager.swift in Sources */,
 				3E530CD72972ADF300A632FC /* ContentView.swift in Sources */,

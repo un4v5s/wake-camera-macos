@@ -9,6 +9,8 @@ import CoreImage
 import AppKit
 
 class ContentViewModel: ObservableObject {
+  static let shared = ContentViewModel()
+
   @Published var frame: CGImage?
   private let frameManager = FrameManager.shared
   

@@ -28,10 +28,11 @@ class CameraManager: ObservableObject {
   @Published var sessionStartDate: Date?
   private var cameraCaptureOutput: CameraCaptureOutput?
   private var photoOutput = AVCapturePhotoOutput()
-
-//  private var videoDevice: AVCaptureDevice?
+  
+  //  private var videoDevice: AVCaptureDevice?
   
   private init() {
+    print("init CameraManager")
     configure()
   }
   
@@ -84,7 +85,6 @@ class CameraManager: ObservableObject {
       status = .failed
       return
     }
-//    self.videoDevice = camera
     
     do {
       let cameraInput = try AVCaptureDeviceInput(device: camera)
@@ -118,7 +118,7 @@ class CameraManager: ObservableObject {
     
     if session.canAddOutput(photoOutput) {
       session.addOutput(photoOutput)
-
+      
     } else {
       set(error: .cannotAddOutput)
       status = .failed
@@ -132,7 +132,7 @@ class CameraManager: ObservableObject {
     checkPermissions()
     sessionQueue.async {
       self.configureCaptureSession()
-//      self.session.startRunning()
+      //      self.session.startRunning()
     }
   }
   

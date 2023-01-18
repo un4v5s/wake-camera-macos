@@ -9,10 +9,15 @@ import SwiftUI
 
 struct MenuBarView: View {
   @AppStorage("SaveFolderPath") private var saveFolderPath = NSHomeDirectory()
+  
+  @StateObject private var model = ContentViewModel()
+  private let cameraManager = CameraManager.shared
+  private let appHandlers = AppHandlers.shared
 
+  
   var body: some View {
     Text("Save to: " + saveFolderPath)
-    Button("Open in Finder"){
+    Button("Open Folder"){
       NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: self.saveFolderPath)
     }
     Button("Reset Folder"){
@@ -31,10 +36,9 @@ struct MenuBarView: View {
       }
     }
     Divider()
-    Button("quit"){
+    Button("Quit"){
       NSApplication.shared.terminate(nil)
     }
-    
   }
 }
 
