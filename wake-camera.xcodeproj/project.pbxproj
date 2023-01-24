@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3E3B4D4A29745B68000C48B3 /* CameraCaptureOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3B4D4929745B68000C48B3 /* CameraCaptureOutput.swift */; };
 		3E530CB02972A9EA00A632FC /* wake_cameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CAF2972A9EA00A632FC /* wake_cameraApp.swift */; };
-		3E530CB42972A9EC00A632FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E530CB32972A9EC00A632FC /* Assets.xcassets */; };
 		3E530CB72972A9EC00A632FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E530CB62972A9EC00A632FC /* Preview Assets.xcassets */; };
 		3E530CD62972AB9F00A632FC /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CD52972AB9F00A632FC /* FrameView.swift */; };
 		3E530CD72972ADF300A632FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CCA2972AA0E00A632FC /* ContentView.swift */; };
@@ -22,6 +21,7 @@
 		3E530CE02972B1AC00A632FC /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CDF2972B1AC00A632FC /* FrameManager.swift */; };
 		3E530CE22972B32700A632FC /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CE12972B32700A632FC /* ContentViewModel.swift */; };
 		3E530CE42972BF1600A632FC /* NSImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CE32972BF1600A632FC /* NSImageExtension.swift */; };
+		3E83E707298035F300A41FF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E530CB32972A9EC00A632FC /* Assets.xcassets */; };
 		3ED643A729770E9500F4496E /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED643A629770E9500F4496E /* MenuBarView.swift */; };
 		3ED643AB297832C400F4496E /* AppHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED643AA297832C400F4496E /* AppHandlers.swift */; };
 		3ED643AD2978330A00F4496E /* NSWorkspaceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED643AC2978330A00F4496E /* NSWorkspaceExtension.swift */; };
@@ -250,8 +250,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E83E707298035F300A41FF7 /* Assets.xcassets in Resources */,
 				3E530CB72972A9EC00A632FC /* Preview Assets.xcassets in Resources */,
-				3E530CB42972A9EC00A632FC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +402,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "wake-camera/wake_camera.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -429,7 +431,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "wake-camera/wake_camera.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
