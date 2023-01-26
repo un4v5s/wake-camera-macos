@@ -2,14 +2,14 @@
 //  AppHandlers.swift
 //  wake-camera
 //
-//  Created by Reona Ogino on 2023/01/18.
+//  Created by un4v5s on 2023/01/18.
 //
 
 import SwiftUI
 
 class AppHandlers: ObservableObject {
   static let shared = AppHandlers()
-
+  
   private let model = ContentViewModel.shared
   private let cameraManager = CameraManager.shared
   

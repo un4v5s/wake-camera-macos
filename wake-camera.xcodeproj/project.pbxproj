@@ -9,19 +9,18 @@
 /* Begin PBXBuildFile section */
 		3E3B4D4A29745B68000C48B3 /* CameraCaptureOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3B4D4929745B68000C48B3 /* CameraCaptureOutput.swift */; };
 		3E530CB02972A9EA00A632FC /* wake_cameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CAF2972A9EA00A632FC /* wake_cameraApp.swift */; };
-		3E530CB72972A9EC00A632FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E530CB62972A9EC00A632FC /* Preview Assets.xcassets */; };
 		3E530CD62972AB9F00A632FC /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CD52972AB9F00A632FC /* FrameView.swift */; };
 		3E530CD72972ADF300A632FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CCA2972AA0E00A632FC /* ContentView.swift */; };
 		3E530CD92972AE3700A632FC /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CD82972AE3700A632FC /* CameraManager.swift */; };
 		3E530CDA2972B0BA00A632FC /* CameraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CCE2972AA0E00A632FC /* CameraError.swift */; };
 		3E530CDB2972B0D000A632FC /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CCC2972AA0E00A632FC /* ErrorView.swift */; };
-		3E530CDC2972B0D000A632FC /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CC92972AA0E00A632FC /* ToggleButton.swift */; };
 		3E530CDD2972B0D000A632FC /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CCB2972AA0E00A632FC /* ControlView.swift */; };
 		3E530CDE2972B0DD00A632FC /* CGImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CD12972AA0E00A632FC /* CGImageExtension.swift */; };
 		3E530CE02972B1AC00A632FC /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CDF2972B1AC00A632FC /* FrameManager.swift */; };
 		3E530CE22972B32700A632FC /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CE12972B32700A632FC /* ContentViewModel.swift */; };
 		3E530CE42972BF1600A632FC /* NSImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E530CE32972BF1600A632FC /* NSImageExtension.swift */; };
 		3E83E707298035F300A41FF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E530CB32972A9EC00A632FC /* Assets.xcassets */; };
+		3E83E70A2982A73900A41FF7 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 3E83E7092982A73900A41FF7 /* LaunchAtLogin */; };
 		3ED643A729770E9500F4496E /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED643A629770E9500F4496E /* MenuBarView.swift */; };
 		3ED643AB297832C400F4496E /* AppHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED643AA297832C400F4496E /* AppHandlers.swift */; };
 		3ED643AD2978330A00F4496E /* NSWorkspaceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED643AC2978330A00F4496E /* NSWorkspaceExtension.swift */; };
@@ -33,21 +32,12 @@
 		3E530CAC2972A9EA00A632FC /* wake-camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wake-camera.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E530CAF2972A9EA00A632FC /* wake_cameraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wake_cameraApp.swift; sourceTree = "<group>"; };
 		3E530CB32972A9EC00A632FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3E530CB62972A9EC00A632FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3E530CB82972A9EC00A632FC /* wake_camera.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = wake_camera.entitlements; sourceTree = "<group>"; };
-		3E530CC02972AA0700A632FC /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
-		3E530CC12972AA0700A632FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3E530CC22972AA0700A632FC /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
-		3E530CC32972AA0700A632FC /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
-		3E530CC52972AA0800A632FC /* CGImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImageExtension.swift; sourceTree = "<group>"; };
-		3E530CC72972AA0800A632FC /* CameraError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraError.swift; sourceTree = "<group>"; };
-		3E530CC92972AA0E00A632FC /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 		3E530CCA2972AA0E00A632FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3E530CCB2972AA0E00A632FC /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		3E530CCC2972AA0E00A632FC /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		3E530CCE2972AA0E00A632FC /* CameraError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraError.swift; sourceTree = "<group>"; };
 		3E530CD12972AA0E00A632FC /* CGImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImageExtension.swift; sourceTree = "<group>"; };
-		3E530CD22972AA6300A632FC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E530CD52972AB9F00A632FC /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
 		3E530CD82972AE3700A632FC /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		3E530CDF2972B1AC00A632FC /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
@@ -64,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E83E70A2982A73900A41FF7 /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,63 +88,14 @@
 				3E530CCF2972AA0E00A632FC /* ViewModels */,
 				3E530CC82972AA0E00A632FC /* Views */,
 				3E530CB82972A9EC00A632FC /* wake_camera.entitlements */,
-				3E530CD22972AA6300A632FC /* LaunchScreen.storyboard */,
-				3E530CB52972A9EC00A632FC /* Preview Content */,
 			);
 			path = "wake-camera";
-			sourceTree = "<group>";
-		};
-		3E530CB52972A9EC00A632FC /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				3E530CC62972AA0800A632FC /* Camera */,
-				3E530CC42972AA0800A632FC /* Extensions */,
-				3E530CBE2972AA0700A632FC /* ViewModels */,
-				3E530CBF2972AA0700A632FC /* Views */,
-				3E530CB62972A9EC00A632FC /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		3E530CBE2972AA0700A632FC /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		3E530CBF2972AA0700A632FC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				3E530CC02972AA0700A632FC /* ToggleButton.swift */,
-				3E530CC12972AA0700A632FC /* ContentView.swift */,
-				3E530CC22972AA0700A632FC /* ControlView.swift */,
-				3E530CC32972AA0700A632FC /* ErrorView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		3E530CC42972AA0800A632FC /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				3E530CC52972AA0800A632FC /* CGImageExtension.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		3E530CC62972AA0800A632FC /* Camera */ = {
-			isa = PBXGroup;
-			children = (
-				3E530CC72972AA0800A632FC /* CameraError.swift */,
-			);
-			path = Camera;
 			sourceTree = "<group>";
 		};
 		3E530CC82972AA0E00A632FC /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				3E530CCA2972AA0E00A632FC /* ContentView.swift */,
-				3E530CC92972AA0E00A632FC /* ToggleButton.swift */,
 				3E530CCB2972AA0E00A632FC /* ControlView.swift */,
 				3E530CD52972AB9F00A632FC /* FrameView.swift */,
 				3E530CCC2972AA0E00A632FC /* ErrorView.swift */,
@@ -208,6 +150,9 @@
 			dependencies = (
 			);
 			name = "wake-camera";
+			packageProductDependencies = (
+				3E83E7092982A73900A41FF7 /* LaunchAtLogin */,
+			);
 			productName = "wake-camera";
 			productReference = 3E530CAC2972A9EA00A632FC /* wake-camera.app */;
 			productType = "com.apple.product-type.application";
@@ -236,6 +181,9 @@
 				Base,
 			);
 			mainGroup = 3E530CA32972A9EA00A632FC;
+			packageReferences = (
+				3E83E7082982A73900A41FF7 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+			);
 			productRefGroup = 3E530CAD2972A9EA00A632FC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -251,7 +199,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E83E707298035F300A41FF7 /* Assets.xcassets in Resources */,
-				3E530CB72972A9EC00A632FC /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +212,6 @@
 				3ED643AF297866B300F4496E /* MenuBarErrorView.swift in Sources */,
 				3E3B4D4A29745B68000C48B3 /* CameraCaptureOutput.swift in Sources */,
 				3E530CDD2972B0D000A632FC /* ControlView.swift in Sources */,
-				3E530CDC2972B0D000A632FC /* ToggleButton.swift in Sources */,
 				3E530CE42972BF1600A632FC /* NSImageExtension.swift in Sources */,
 				3E530CD62972AB9F00A632FC /* FrameView.swift in Sources */,
 				3E530CDB2972B0D000A632FC /* ErrorView.swift in Sources */,
@@ -409,11 +355,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"wake-camera/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = FW743NG4FE;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSBackgroundOnly = NO;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSDesktopFolderUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -438,11 +387,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"wake-camera/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = FW743NG4FE;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSBackgroundOnly = NO;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSDesktopFolderUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -478,6 +430,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3E83E7082982A73900A41FF7 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3E83E7092982A73900A41FF7 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E83E7082982A73900A41FF7 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3E530CA42972A9EA00A632FC /* Project object */;
 }

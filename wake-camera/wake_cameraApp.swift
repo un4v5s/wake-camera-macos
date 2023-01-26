@@ -2,7 +2,7 @@
 //  wake_cameraApp.swift
 //  wake-camera
 //
-//  Created by Reona Ogino on 2023/01/14.
+//  Created by un4v5s on 2023/01/14.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct wake_cameraApp: App {
   @AppStorage("showMenuBarExtra") private var showMenuBarExtra = true
   @StateObject private var model = ContentViewModel.shared
-
+  
   var body: some Scene {
 //    WindowGroup {
 //      ContentView()
@@ -28,7 +28,6 @@ struct wake_cameraApp: App {
         MenuBarView()
       }
     }
-    
-    
+    .menuBarExtraStyle(.menu)
   }
 }

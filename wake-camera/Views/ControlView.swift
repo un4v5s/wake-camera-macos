@@ -2,7 +2,7 @@
 //  ControlView.swift
 //  wake-camera
 //
-//  Created by Reona Ogino on 2023/01/19.
+//  Created by un4v5s on 2023/01/19.
 //
 
 import SwiftUI
@@ -16,7 +16,8 @@ struct ControlView: View {
   
   @State var showFileChooser = false
   @State var folderPath = "Filename"
-  @AppStorage("SaveFolderPath") private var saveFolderPath = NSHomeDirectory()
+  @AppStorage("SaveFolderPath") private var saveFolderPath = desktopPath // global var  from MenuBarView
+  @State private var showAlert = false
   
   var body: some View {
     VStack {
@@ -25,33 +26,38 @@ struct ControlView: View {
       
       HStack(spacing: 12) {
         Text("Avg.: " + self.averageRed.description)
+        
         Text("Session Started: " + self.sessionStarted.description)
-//        Button("Open Save Folder"){
-//          NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: self.saveFolderPath)
-//        }
-//        Button("Reset Folder"){
-//          self.saveFolderPath = NSHomeDirectory()
-//        }
-//        Button("Choose Folder to Save")
-//        {
-//          let panel = NSOpenPanel()
-//          panel.canChooseFiles = false
-//          panel.canChooseDirectories = true
-//          panel.allowsMultipleSelection = false
-//          panel.canCreateDirectories = true
-//          panel.directoryURL = URL(string: self.saveFolderPath)
-//          if panel.runModal() == .OK {
-//            self.saveFolderPath = panel.url?.path() ?? NSHomeDirectory()
-//          }
-//        }
+        
+        Button("Open Save Folder"){
+          NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: self.saveFolderPath)
+        }
+        
+        Button("Reset Folder"){
+          self.saveFolderPath = desktopPath // global var from MenuBarView
+        }
+        
+        Button("Choose Folder to Save")
+        {
+          let panel = NSOpenPanel()
+          panel.canChooseFiles = false
+          panel.canChooseDirectories = true
+          panel.allowsMultipleSelection = false
+          panel.canCreateDirectories = true
+          panel.directoryURL = URL(string: self.saveFolderPath)
+          if panel.runModal() == .OK {
+            self.saveFolderPath = panel.url?.path() ?? desktopPath // global var  from MenuBarView
+          }
+        }
+        
         Button("wake", action: {
           self.cameraManager.start()
           self.model.resetTakePhotoFlag()
         })
-        //          Button("stop", action: {self.cameraManager.stop()})
+        
+//          Button("stop", action: {self.cameraManager.stop()})
       }
     }
-    
     
   }
 }

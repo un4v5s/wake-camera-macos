@@ -2,7 +2,7 @@
 //  CameraError.swift
 //  wake-camera
 //
-//  Created by Reona Ogino on 2023/01/19.
+//  Created by un4v5s on 2023/01/19.
 //
 
 import Foundation

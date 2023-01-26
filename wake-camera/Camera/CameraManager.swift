@@ -2,7 +2,7 @@
 //  CameraManager.swift
 //  wake-camera
 //
-//  Created by Reona Ogino on 2023/01/14.
+//  Created by un4v5s on 2023/01/14.
 //
 
 import AVFoundation
@@ -28,9 +28,7 @@ class CameraManager: ObservableObject {
   @Published var sessionStartDate: Date?
   private var cameraCaptureOutput: CameraCaptureOutput?
   private var photoOutput = AVCapturePhotoOutput()
-  
-  //  private var videoDevice: AVCaptureDevice?
-  
+    
   private init() {
     print("init CameraManager")
     configure()
@@ -132,7 +130,6 @@ class CameraManager: ObservableObject {
     checkPermissions()
     sessionQueue.async {
       self.configureCaptureSession()
-      //      self.session.startRunning()
     }
   }
   
