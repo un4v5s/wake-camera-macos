@@ -65,4 +65,4 @@ wake-camera-macos
 ## 謝辞
 
 - [LaunchAtLogin-Modern](https://github.com/sindresorhus/LaunchAtLogin-Modern)
-- [SwiftUIとCombineでカメラアプリを作る](https://www.kodeco.com/26244793-building-a-camera-app-with-swiftui-and-combine)
+- [Building a Camera App With SwiftUI and Combine](https://www.kodeco.com/26244793-building-a-camera-app-with-swiftui-and-combine)
