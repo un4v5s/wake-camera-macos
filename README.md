@@ -3,7 +3,7 @@ wake-camera-macos
 
 [日本語 README](README_jp.md)
 
-### Overview
+## Overview
 
 A macOS app that takes a picture when the device awake from sleep.
 
@@ -29,7 +29,7 @@ This is why I decided to create this app.
 
 ## Features
 
-- ### Change the save folder
+### Change the save folder
 
 From the menu, you can change the destination folder for captured images.
 
@@ -37,7 +37,7 @@ From the menu, you can change the destination folder for captured images.
 
 ![img](./readme_imgs/readme-imgs_change_save_folder.png)
 
-- ### Launch at login
+### Launch at login
 
 You can add this application to your login items.
 
