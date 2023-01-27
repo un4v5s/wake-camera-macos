@@ -11,7 +11,7 @@ import SwiftUI
 
 class CameraCaptureOutput: NSObject, AVCapturePhotoCaptureDelegate {
   private let cameraManager = CameraManager.shared
-  @AppStorage("SaveFolderPath") private var saveFolderPath = NSHomeDirectory()
+  @AppStorage("SaveFolderPath") private var saveFolderPath = desktopPath
   
   func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) -> Void {
     print("didFinishProcessingPhoto - \(photo)")
@@ -27,12 +27,16 @@ class CameraCaptureOutput: NSObject, AVCapturePhotoCaptureDelegate {
     
     let folderPath = URL(string: "file://\(self.saveFolderPath)")
     
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd_HH-mm-ss"
+    let dateString = dateFormatter.string(from: Date())
+
     // PNG
-    //    let newImagePathPNG = URL(fileURLWithPath: String(NSDate().timeIntervalSince1970 * 1000) + ".png"  , isDirectory: false, relativeTo: folderPath)
+    //    let newImagePathPNG = URL(fileURLWithPath: dateString + ".png"  , isDirectory: false, relativeTo: folderPath)
     //    let resultPng = self.savePNG(image: image!, path: newImagePathPNG)
     //    print("capture photo, result=\(resultPng)")
     
-    let newImagePathJPEG = URL(fileURLWithPath: String(NSDate().timeIntervalSince1970 * 1000) + ".jpeg"  , isDirectory: false, relativeTo: folderPath)
+    let newImagePathJPEG = URL(fileURLWithPath: dateString + ".jpeg"  , isDirectory: false, relativeTo: folderPath)
     let resultJpeg = self.saveJPEG(image: image!, path: newImagePathJPEG)
     print("capture photo, result=\(resultJpeg)")
     

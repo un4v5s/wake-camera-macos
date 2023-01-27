@@ -8,10 +8,10 @@
 import SwiftUI
 import LaunchAtLogin
 
+// global var
 let desktopPath = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Desktop").path()
 
 struct MenuBarView: View {
-
   @AppStorage("SaveFolderPath") private var saveFolderPath = desktopPath
   
   @StateObject private var model = ContentViewModel()
