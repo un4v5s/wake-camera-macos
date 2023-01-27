@@ -3,7 +3,7 @@ wake-camera-macos
 
 [English README](README.md)
 
-### 概要
+## 概要
 
 これは、デバイスがスリープから復帰したときに写真を撮影する macOS アプリです。
 
@@ -29,7 +29,7 @@ wake-camera-macos
 
 ## 特徴
 
-- 画像の保存先フォルダの変更
+### 画像の保存先フォルダの変更
 
 メニューバーのアイコンをクリックし、キャプチャ画像の保存先フォルダを変更することができます。
 
@@ -37,7 +37,7 @@ wake-camera-macos
 
 ![img](./readme_imgs/readme-imgs_change_save_folder.png)
 
-- ### ログイン項目に追加
+### ログイン項目に追加
 
 このアプリケーションをログイン項目に追加することができます。
 
@@ -59,8 +59,7 @@ wake-camera-macos
 
 ## 開発者
 
-[un4v5s](https://github.com/un4v5s)。
-
+[un4v5s](https://github.com/un4v5s)
 
 ## 謝辞
 
