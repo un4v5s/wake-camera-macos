@@ -1,61 +1,57 @@
 wake-camera-macos
 ====
 
-[日本語 README.md](README_jp.md)
+[日本語 README](README_jp.md)
 
-A macOS app that takes a picture when the device awake from sleep
+### Overview
+
+A macOS app that takes a picture when the device awake from sleep.
+
+This app is a menubar app and runs in the background.
+
+Our face changes little by little day by day.
+
+It is fun to watch your face change over the years.
+
+![img](./readme_imgs/demo.gif)
 
 <br>
 
 ## Background
 
-I had been used a macOS app called [Snoop Catcher](https://macdaddy.io/snoop-catcher/) developed by MacDaddy.
+I had been using a macOS app called [Snoop Catcher](https://macdaddy.io/snoop-catcher/) developed by MacDaddy for years.
 
-The app had no longer maintained for years and not working correctly since last several version of macOS.
+This app had not been maintained for years and had stopped working properly since some recent versions of macOS.
 
-This is the reason why I decided to make this app.
+This is why I decided to create this app.
 
 <br>
 
 ## Features
 
-### Overview
+- ### Change the save folder
 
-This app runs in background and menubar app.
-
-When your device awake from sleep, start built-in webcam and take a picture.
-
-Your face is changing day by day.
-
-It is just fun to show through your face changing for years.
-
-### Change the folder to save
-
-You can change the folder where captured images are save.
-
-Change the folder from menubar icon.
+From the menu, you can change the destination folder for captured images.
 
 ![img](./readme_imgs/readme-imgs_menubar_1.png)
 
-
 ![img](./readme_imgs/readme-imgs_change_save_folder.png)
 
-### Launch at login
+- ### Launch at login
 
-You can add this app to login items.
+You can add this application to your login items.
 
-Check the setting from "More Settings > Launch at login" on the menu.
+You can turn on the setting from the menu "More Settings > Launch あt Login".
 
 ![img](./readme_imgs/readme-imgs_menubar_2.png)
 
 <br>
 
-Thats all.
-
-Feel free to send me any feature request from issues.
 ## Contribution
 
 Welcome. Please.
+
+If you have any feature requests, please feel free to send them via issue.
 
 <br>
 
@@ -69,5 +65,9 @@ Welcome. Please.
 
 [un4v5s](https://github.com/un4v5s)
 
+<br>
 
+## Acknowledgments
 
+- [LaunchAtLogin-Modern](https://github.com/sindresorhus/LaunchAtLogin-Modern)
+- [Building a Camera App With SwiftUI and Combine](https://www.kodeco.com/26244793-building-a-camera-app-with-swiftui-and-combine)
